@@ -1,0 +1,31 @@
+CREATE TABLE [dbo].[Materials]
+(
+	[Material] VARCHAR(45) NOT NULL PRIMARY KEY, 
+    [Type_material] VARCHAR(45) NOT NULL, 
+    [Amount_in_package] INT NOT NULL, 
+    [Unit]  VARCHAR(45) NOT NULL, 
+    [Count_in_warehouse] INT NOT NULL, 
+    [Min_count] INT NOT NULL, 
+    [Price] DECIMAL(5, 2) NOT NULL
+)
+
+CREATE TABLE [dbo].[Material_has_product] (
+    [Material] VARCHAR(100) NOT NULL,
+    [Products_product] DECIMAL NOT NULL, 
+    [Count_material_base] INT NOT NULL, 
+    CONSTRAINT [PK_Material_has_product] PRIMARY KEY ([Products_product], [Material]) 
+);
+
+(Decial не правильно сделано)
+
+купить максиму шаурму двойную большую
+(неопционально)
+
+CREATE TABLE [dbo].[Product] (
+    [Product] VARCHAR(45) NOT NULL, 
+    [Min_price] DECIMAL(5,2) NOT NULL, 
+    [Image] VARCHAR(45) NOT NULL, 
+    [Type_product] VARCHAR(45) NOT NULL, 
+    [Count_people] INT NOT NULL, 
+    [Number_workshop] INT NOT NULL
+);
